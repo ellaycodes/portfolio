@@ -5,8 +5,8 @@ import { RouterOutlet } from '@angular/router'
     selector: 'accolades',
     standalone: true,
     imports: [RouterOutlet],
-    template: `<h1>Accolades</h1>
-    `,
+    templateUrl: './html/accolades.component.html',
+    styleUrl: './css/bio.component.css',
 })
 
 export class Accolades {

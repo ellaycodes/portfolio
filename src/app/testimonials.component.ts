@@ -5,8 +5,8 @@ import { RouterOutlet } from '@angular/router'
     selector: 'testimonials',
     standalone: true,
     imports: [RouterOutlet],
-    template: `<h1>Testimonials</h1>
-    `,
+    templateUrl: './html/testimonials.component.html',
+    styleUrl: './css/bio.component.css',
 })
 
 export class Testimonials {

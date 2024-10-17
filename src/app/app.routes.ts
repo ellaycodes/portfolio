@@ -10,6 +10,7 @@ import { Contact } from './contact.component';
 import { Home } from './home.component';
 
 export const routes: Routes = [
+  { path: '', title: 'Home',component: Home },
   { path: 'intro', title: 'Introduction', component: Intro },
   { path: 'bio', title: 'Biography',component: Bio },
   { path: 'education', title: 'Education',component: Education },
@@ -18,5 +19,4 @@ export const routes: Routes = [
   { path: 'accolades', title: 'Accolades',component: Accolades },
   { path: 'articles', title: 'Articles',component: Articles },
   { path: 'contact', title: 'Contact',component: Contact },
-  { path: '', title: 'Home',component: Home },
 ];

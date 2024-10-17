@@ -5,8 +5,8 @@ import { RouterOutlet } from '@angular/router'
     selector: 'work',
     standalone: true,
     imports: [RouterOutlet],
-    template: `<h1>Work Experience</h1>
-    `,
+    templateUrl: './html/work.component.html',
+    styleUrl: './css/bio.component.css',
 })
 
 export class Work {

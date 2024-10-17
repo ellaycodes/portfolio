@@ -5,8 +5,8 @@ import { RouterOutlet } from '@angular/router'
     selector: 'contact',
     standalone: true,
     imports: [RouterOutlet],
-    template: `<h1>Contact</h1>
-    `,
+    templateUrl: './html/contact.component.html',
+    styleUrl: './css/bio.component.css',
 })
 
 export class Contact {

@@ -1,14 +1,15 @@
 import { Component } from "@angular/core";
 import { RouterOutlet } from '@angular/router'
 
+
 @Component({
     selector: 'home',
     standalone: true,
     imports: [RouterOutlet],
-    template: `<h1>Home</h1>
-    `,
+    templateUrl: './html/home.component.html',
+    styleUrl: './css/home.component.css',
 })
 
 export class Home {
-
+    
 }

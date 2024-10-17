@@ -1,0 +1,8 @@
+
+  #navBar {
+    position: fixed;
+    width: 8vw;
+    box-shadow: 1px 0px 10px black;
+    min-width: 100px;
+    background-color: rgba(0, 0, 0, 0.8);
+  }

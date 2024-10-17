@@ -1,11 +1,12 @@
 import { Component } from "@angular/core";
-import { RouterOutlet } from '@angular/router'
+// import { RouterOutlet } from '@angular/router'
 
 @Component({
     selector: 'intro',
     standalone: true,
-    imports: [RouterOutlet],
-    template: `<h1>THIS IS THE INTRO SECTION</h1>`,
+    imports: [],
+    templateUrl: './html/intro.component.html',
+    styleUrl: './css/bio.component.css',
 })
 
 export class Intro {

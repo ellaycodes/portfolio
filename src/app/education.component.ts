@@ -5,8 +5,8 @@ import { RouterOutlet } from '@angular/router'
     selector: 'education',
     standalone: true,
     imports: [RouterOutlet],
-    template: `<h1>Education</h1>
-    `,
+    templateUrl: './html/edu.component.html',
+    styleUrl: './css/bio.component.css',
 })
 
 export class Education {
