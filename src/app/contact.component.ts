@@ -1,12 +1,12 @@
 import { Component } from "@angular/core";
-import { RouterOutlet } from '@angular/router'
+
 
 @Component({
     selector: 'contact',
     standalone: true,
-    imports: [RouterOutlet],
+    imports: [],
     templateUrl: './html/contact.component.html',
-    styleUrl: './css/bio.component.css',
+    styleUrls: ['./css/app.component.css', './css/contact.component.css'],
 })
 
 export class Contact {

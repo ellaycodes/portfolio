@@ -1,12 +1,11 @@
 import { Component } from "@angular/core";
-import { RouterOutlet } from '@angular/router'
 
 @Component({
     selector: 'articles',
     standalone: true,
-    imports: [RouterOutlet],
+    imports: [],
     templateUrl: './html/articles.component.html',
-    styleUrl: './css/bio.component.css',
+    styleUrls: ['./css/app.component.css', './css/articles.component.css'],
 })
 
 export class Articles {

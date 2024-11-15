@@ -1,12 +1,11 @@
 import { Component } from "@angular/core";
-import { RouterOutlet } from '@angular/router'
 
 @Component({
     selector: 'education',
     standalone: true,
-    imports: [RouterOutlet],
+    imports: [],
     templateUrl: './html/edu.component.html',
-    styleUrl: './css/bio.component.css',
+    styleUrls: ['./css/app.component.css', './css/edu.component.css'],
 })
 
 export class Education {

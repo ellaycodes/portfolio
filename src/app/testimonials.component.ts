@@ -1,12 +1,11 @@
 import { Component } from "@angular/core";
-import { RouterOutlet } from '@angular/router'
 
 @Component({
     selector: 'testimonials',
     standalone: true,
-    imports: [RouterOutlet],
+    imports: [],
     templateUrl: './html/testimonials.component.html',
-    styleUrl: './css/bio.component.css',
+    styleUrls: ['./css/app.component.css', './css/testimonials.component.css'],
 })
 
 export class Testimonials {

@@ -1,12 +1,11 @@
 import { Component } from "@angular/core";
-import { RouterOutlet } from '@angular/router'
 
 @Component({
     selector: 'accolades',
     standalone: true,
-    imports: [RouterOutlet],
+    imports: [],
     templateUrl: './html/accolades.component.html',
-    styleUrl: './css/bio.component.css',
+    styleUrls: ['./css/app.component.css', './css/accolades.component.css'],
 })
 
 export class Accolades {

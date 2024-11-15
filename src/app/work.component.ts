@@ -1,12 +1,12 @@
 import { Component } from "@angular/core";
-import { RouterOutlet } from '@angular/router'
+
 
 @Component({
     selector: 'work',
     standalone: true,
-    imports: [RouterOutlet],
+    imports: [],
     templateUrl: './html/work.component.html',
-    styleUrl: './css/bio.component.css',
+    styleUrls: ['./css/app.component.css', './css/work.component.css'],
 })
 
 export class Work {

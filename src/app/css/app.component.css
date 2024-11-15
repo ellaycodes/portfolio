@@ -6,3 +6,9 @@
     min-width: 100px;
     background-color: rgba(0, 0, 0, 0.8);
   }
+
+  .body {
+    height: 80vh;
+    padding: 10vh 8vh 0vh;
+  }
+
