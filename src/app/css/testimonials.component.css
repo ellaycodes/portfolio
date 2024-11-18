@@ -1,3 +1,99 @@
 .testimonials {
-    background-color: #606060;
+  background-color: #606060;
+  color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  height: 100%;
+  padding-bottom: 8vh;
+}
+h1 {
+  text-transform: capitalize;
+  font-size: 60px;
+  margin: 0 0 10vh 0;
+}
+
+.card-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  row-gap: 10vh;
+}
+
+.card {
+  width: clamp(200px, 40vw, 900px);
+  max-width: 900px;
+  display: flex;
+  column-gap: 2vw;
+}
+
+img {
+    width: auto;
+    height: auto;
+    object-fit: cover;
+}
+
+/* .person {
+line-height: 5px;
+} */
+
+/* .description {
+    line-height: 10px;
+} */
+
+@media screen and (min-width: 1440px) {
+    h2 {
+        font-size: 30px;
+        margin: 0;
+
+    }
+    .job-title {
+        font-size: 22px;
+        margin-top: 0;
+    }
+    .testimonial {
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .card {
+        width: 100%;
+    }
+    .testimonials {
+        padding: 5vh 5vw;
+    }
+    h2 {
+        margin: 0;
+    }
+    .job-title {
+        margin-top: 0;
+    }
+    .testimonial {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .testimonials {
+        padding: 5vh 5vw;
+    }
+    .card {
+        flex-direction: column;
+        width: clamp(300px, 40vw, 900px);
+    }
+    h2 {
+        margin-top: 16px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .card {
+        flex-direction: column;
+        width: 100%;
+    }
+    h1 {
+        font-size: 40px;
+    }
+    .testimonial {
+        font-size: 22px;
+    }
 }
