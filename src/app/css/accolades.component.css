@@ -1,3 +1,116 @@
 .accolades {
-    background-color: #edf0f2;
+  background-color: #edf0f2;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  height: 100%;
+  padding-top: 5vh;
+  padding-bottom: 8vh;
+}
+
+h1 {
+    font-size: 50px;
+    margin-bottom: 8vh;
+}
+
+.accolade-title {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+}
+
+img {
+  height: 100%;
+  width: 25%;
+  object-fit: cover;
+}
+
+h2 {
+  font-size: 12px;
+  text-align: center;
+}
+
+.whole-accolade {
+  width: 20vw;
+}
+
+p {
+    font-size: 10px;
+    text-align: center;
+}
+
+section {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 5vw;
+}
+
+@media screen and (min-width: 1440px) {
+    h2 {
+        font-size: 22px;
+    }
+    .accolade-title {
+        height: 15vh;
+    }
+    p {
+        font-size: 24px;
+    }
+    section {
+        justify-content: center;
+        row-gap: 5vw;
+        column-gap: 2vw;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    section {
+        column-gap: 1vw;
+    }
+    img {
+        height: 80%
+    }
+    h2 {
+        font-size: 17px;
+    }
+    p {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .whole-accolade {
+        width: 30vw;
+    }
+    img {
+        height: 100%;
+    }
+    p {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .whole-accolade {
+        width: 100%;
+    }
+    h2 {
+        font-size: 22px;
+    }
+    p {
+        font-size: 20px;
+    }
+    .accolade-title {
+        height: 15vh;
+    }
+    img {
+        height: 70%
+    }
+    h1 {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .accolades {
+        padding: 10px;
+    }
 }
