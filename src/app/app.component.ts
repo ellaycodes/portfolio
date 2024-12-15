@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { NavBar } from './nav.component';
 import { BodyComponent } from './body.component'
 
 @Component({

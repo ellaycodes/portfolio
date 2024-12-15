@@ -1,6 +1,7 @@
 .edu {
     background-color: #edf0f2;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: "Libre Franklin", sans-serif;
+    letter-spacing: -10px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
