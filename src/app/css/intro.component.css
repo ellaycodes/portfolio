@@ -1,76 +1,118 @@
 .intro {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    height: 100%;
-  }
+  display: flex;
+  font-family: "Libre Franklin", sans-serif;
+  justify-content: center;
+  padding: 0 8vh 10vh 8vh;
+  background-color: rgb(237, 240, 242);
+}
+
+.container {
+  width: 1440px;
+  display: flex;
+  justify-content: space-around;
+  gap: 2vw;
+}
 
 .text {
-    width: 40vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.intro_portrait {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 img {
-    width: 45vw;
-    height: 60%;
-    object-fit: cover;
-    object-position: 50% 0%;
+  width: 100%;
+  height: 60%;
+  object-fit: cover;
+  object-position: 50% 0%;
 }
 
 h1 {
-    font-size: clamp(15px, 3vw, 70px);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: clamp(30px, 330%, 55px);
+  letter-spacing: -3px;
 }
 
- p {
-    font-size: 18px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
- }
+p {
+  font-size: 13px;
+  margin: 0;
+}
 
- .statement {
-    font-size: clamp(13px, 3vw, 18px);
-    width: 90%;
-    line-height: 1.5;
- }
+.intro_portrait > p {
+  text-transform: uppercase;
+  margin-top: 10px;
+}
 
- @media screen and (max-width: 1440px) {
-    .body {
-        padding: 10vh 0 0;
-    }
- }
+.statement {
+  font-size: clamp(13px, 120%, 18px);
+}
 
- @media screen and (max-width: 1024px) {
-    .text {
-        width: 100%;
-    }
-    .intro_portrait {
-        width: 100%;
-        padding: 3vh 0 0;
-    }
-    img {
-        width: 100%;
-    }
-    .body {
-        padding: 5vh 8vw 0;
-    }
-    h1 {
-        font-size: 50px;
-    }
- }
+@media screen and (max-width: 1440px) {
+  .body {
+    padding: 0 2vw 10vh;
+  }
+  .container {
+    width: 1300px;
+  }
+  h1 {
+    font-size: clamp(30px, 270%, 55px);
+  }
+}
 
- @media screen and (max-width: 425px) {
-    .body {
-        padding: 20px 20px 0;
-    }
-    h1 {
-        font-size: 30px;
-    }
-    .text {
-        width: 100%;
-        display: block;
-        align-self: end;
-    }
- }
+@media screen and (max-width: 1024px) {
+  .container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .intro {
+    padding: 10vh 8vw 0vh;
+  }
+  .text {
+    width: 80%;
+  }
+  .intro_portrait {
+    width: 80%;
+    justify-content: flex-start;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .intro {
+    width: 100%;
+    padding: 10vh 5vw 0vh;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .intro {
+    padding: 10vh 0vw 0vh;
+    height: unset;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .intro {
+    padding: 5vh 0;
+  }
+  .text {
+    width: 95%;
+  }
+  .intro_portrait {
+    width: 95%;
+  }
+  .statement {
+    font-size: clamp(13px, 90%, 17px);
+  }
+  .container {
+    gap: 2vh;
+  }
+  .body {
+    height: 70vh;
+  }
+}

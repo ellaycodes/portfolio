@@ -1,7 +1,7 @@
 .edu {
     background-color: #edf0f2;
     font-family: "Libre Franklin", sans-serif;
-    letter-spacing: -10px;
+    letter-spacing: -1px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -70,9 +70,13 @@ h1 {
         font-size: 18px;
     }
     .edu {
-        padding: 1vh 4vw;
+        padding: 1vh 5vw;
+        width: 100%;
     }
     .card {
         width: 100%;
+    }
+    .qualification_title {
+            font-size: clamp(10px, 140%, 30px);
     }
 }

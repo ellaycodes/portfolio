@@ -171,9 +171,17 @@ body {
   }
   #main {
     height: clamp(100px, 60vh, 1000px);
+    padding: 0;
   }
   .heroContent {
     gap: 5vh;
+    width: 90%;
+  }
+  .container {
+    justify-content: center;
+  }
+  h1 {
+    font-size: 11vw;
   }
 }
 
