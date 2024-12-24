@@ -3,15 +3,24 @@
     font-family: "Libre Franklin", sans-serif;
     letter-spacing: -1px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
     height: 100%;
     padding-bottom: 3vh;
 }
 
+.container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 1440px;
+}
+
 h1 {
     text-transform: capitalize;
-    font-size: 45px;
+    font-size: clamp(50px, 400%, 85px);
+    margin: 0 0 10px 0;
+    letter-spacing: -3px;
 }
 
 .text {
@@ -19,7 +28,7 @@ h1 {
 }
 
 .description {
-    font-size: 25px;
+    font-size: clamp(15px, 130%, 30px);
     font-weight: 100;
     line-height: 1.4;
     width: 80%;
@@ -29,32 +38,19 @@ h1 {
     border-top: 1px solid #000;
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (max-width: 1440px) {
     .edu {
-        justify-content: center;
+        padding: 10vh 8vw;
     }
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1300px) {
     .text {
-        width: 100%;
-    }
-    .description {
         width: 100%;
         margin-bottom: 5vh;
     }
-    .card {
-        width: 100%;
-    }
-}
-
-@media screen and (max-width: 1024px) {
-    .text {
-        width: 100%;
-    }
     .description {
         width: 100%;
-        font-size: 18px;
     }
     .card {
         width: 100%;
@@ -62,21 +58,32 @@ h1 {
 }
 
 @media screen and (max-width: 768px) {
-    .text {
-        width: 100%;
-    }
-    .description {
-        width: 100%;
-        font-size: 18px;
-    }
     .edu {
-        padding: 1vh 5vw;
+        padding: 10vh 5vw;
         width: 100%;
+    }
+    .container {
+        padding: 0vh 5vw;
     }
     .card {
         width: 100%;
     }
     .qualification_title {
-            font-size: clamp(10px, 140%, 30px);
+        font-size: clamp(10px, 140%, 30px);
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .edu {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .edu {
+        padding: 0;
+    }
+    .container {
+        padding: 5vh 5vw;
     }
 }

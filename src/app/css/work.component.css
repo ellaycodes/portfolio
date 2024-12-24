@@ -5,7 +5,16 @@
   padding-top: 8vh;
   padding-bottom: 10vh;
   height: 100%;
+  display: flex;
+  justify-content: center;
 }
+.container {
+  width: 1440px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
 h1 {
   font-size: 140px;
   text-align: end;
