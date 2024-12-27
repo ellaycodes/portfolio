@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;
   color: white;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Libre Franklin", sans-serif;
   height: 50vh;
 }
 .container {
@@ -77,11 +77,21 @@ h1 {
   }
   .container {
     width: 100%;
+    padding: 10vh 0 0;
   }
   h1 {
-    white-space: wrap;
+    white-space: nowrap;
     margin-bottom: 0;
-    font-size: 7em;
+    font-size: 80px;
+  }
+  .contact {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .contact {
+    padding: 0;
   }
 }
 
@@ -89,4 +99,16 @@ h1 {
   img {
     height: 25%;
   }
+  .container {
+    padding: 0 8vw;
+  }
+  h1 {
+    font-size: clamp(30px, 15vw, 100px);
+  }
+}
+
+@media screen and (max-width: 375px) {
+   .body {
+    padding: 0 8vw;
+   }
 }

@@ -99,6 +99,7 @@ button {
       }
       .article {
         width: 25vw;
+        height: fit-content;
       }
       section {
         justify-content: start;
