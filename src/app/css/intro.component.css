@@ -116,3 +116,9 @@ p {
     height: 70vh;
   }
 }
+
+@media screen and (max-width: 375px) {
+  .intro {
+    padding: 0 8vw;
+  }
+}

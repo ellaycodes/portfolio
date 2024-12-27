@@ -197,4 +197,7 @@ body {
     border-bottom: 10px solid rgba(255, 255, 255, 0.7);
     transform: translate(40px, 0) rotate(-45deg); /* Ensure alignment matches */
   }
+  #main {
+    padding: 0 8vw;
+  }
 }

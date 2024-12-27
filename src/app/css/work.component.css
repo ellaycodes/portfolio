@@ -1,7 +1,7 @@
 .work {
   background-color: #2b2b2b;
   color: #ffffff;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Libre Franklin", sans-serif;
   padding-top: 8vh;
   padding-bottom: 10vh;
   height: 100%;
@@ -12,11 +12,11 @@
   width: 1440px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: flex-end;
 }
 
 h1 {
-  font-size: 140px;
+  font-size: clamp(50px, 500%, 140px);
   text-align: end;
   letter-spacing: -7px;
   margin-top: 0;
@@ -24,9 +24,9 @@ h1 {
 .card-section {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: flex-end;
   row-gap: 10vh;
-  column-gap: 5vw;
+  column-gap: 1vw;
   padding-bottom: 5vh;
 }
 .card-title {
@@ -35,79 +35,61 @@ h1 {
 
 .job-title {
   font-weight: 700;
-  font-size: 25px;
+  font-size: clamp(15px, 120%, 25px);
   line-height: normal;
+  height: 6vh;
 }
 
 .date {
   font-size: 25px;
   font-weight: 100;
+  margin: 0;
 }
 
 .card {
-  width: clamp(200px, 25vw, 600px);
+  width: clamp(200px, 30%, 500px);
   max-width: 550px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
 }
+
 .caption {
     font-size: 20px;
 }
 img {
-  width: clamp(200px, 20vw, 600px);
-  height: clamp(100px, 20vh, 200px);
+  width: 100%;
+  height: clamp(100px, 30vh, 200px);
   object-fit: cover;
 }
 
-.uni-of-leicester {
-  object-position: 50% 0%;
+#uni-of-leicester {
+  object-position: 40% 0%;
 }
 
 @media screen and (max-width: 1440px) {
-  .work {
-    padding: 5vh 3vw 1vh;
+  .card-section {
+    justify-content: center;
   }
-  h1 {
-    font-size: 120px;
-    letter-spacing: -2px;
-    margin: 0 0 6vh 0;
-  }
-  .card {
-    width: 100%;
-  }
-   img {
-    width: 100%;
-    height: 20vh;
-  }
-  .date {
-    font-size: 30px;
-  }
-  .job-title {
-    font-size: 30px;
-  }
-  .caption {
-    font-size: 25px;
-  } 
 }
 
 @media screen and (max-width: 1024px) {
-    h1 {
-      font-size: 100px;
+    .card-section {
+      column-gap: 2vw;
     }
   }
 
   @media screen and (max-width: 768px) {
-    h1 {
-      font-size: 80px;
+    .work {
+      width: 100%;
+      padding: 8vh 5vw 10vh;
     }
   }
 
 @media screen and (max-width: 650px) {
-  .work {
-    padding: 5vh 3vw 1vh;
-  }
   h1 {
-    font-size: 60px;
     letter-spacing: -2px;
-    margin: 0 0 6vh 0;
   }
   .card {
     width: 100%;
@@ -127,5 +109,25 @@ img {
   }
   .card-section {
     row-gap: 5vh;
+  }
+}
+
+@media screen and (max-width: 450px) {
+.work {
+  padding: 8vh 0vw 10vh;
+}
+.container {
+  padding: 0vh 5vw;
+}
+ h1 {
+  font-size: clamp(15px, 350%, 80px);
+  white-space: nowrap;
+  letter-spacing: -3px;
+ }
+}
+
+@media screen and (max-width: 375px) {
+  .body {
+    padding: 8vh 8vw 10vh;
   }
 }

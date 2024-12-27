@@ -1,14 +1,21 @@
 .accolades {
   background-color: #edf0f2;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Libre Franklin", sans-serif;
   height: 100%;
   padding-top: 5vh;
   padding-bottom: 8vh;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+    width: 1340px;
 }
 
 h1 {
-    font-size: 50px;
-    margin-bottom: 8vh;
+    font-size: 70px;
+    margin-bottom: 5vh;
+    letter-spacing: -5px;
 }
 
 .accolade-title {
@@ -24,93 +31,96 @@ img {
 }
 
 h2 {
-  font-size: 12px;
+  font-size: clamp(11px, 80%, 16px);
   text-align: center;
+  text-transform: uppercase;
 }
 
 .whole-accolade {
-  width: 20vw;
+  width: 22%;
 }
 
 p {
-    font-size: 10px;
+    font-size: clamp(10px, 80%, 16px);
     text-align: center;
+    color: #606060;
 }
 
 section {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
-    gap: 5vw;
-}
-
-@media screen and (min-width: 1440px) {
-    h2 {
-        font-size: 22px;
-    }
-    .accolade-title {
-        height: 15vh;
-    }
-    p {
-        font-size: 24px;
-    }
-    section {
-        justify-content: center;
-        row-gap: 5vw;
-        column-gap: 2vw;
-    }
+    row-gap: 5vh;
+    column-gap: 2vw;
 }
 
 @media screen and (max-width: 1440px) {
     section {
-        column-gap: 1vw;
+        column-gap: 2vw;
     }
     img {
         height: 80%
     }
     h2 {
-        font-size: 17px;
-    }
-    p {
-        font-size: 16px;
+        font-size: clamp(11px, 70%, 16px);;
     }
 }
 
 @media screen and (max-width: 1024px) {
-    .whole-accolade {
-        width: 30vw;
-    }
     img {
         height: 100%;
     }
-    p {
-        font-size: 18px;
+    section {
+        justify-content: space-around;
+    }
+    .whole-accolade {
+        width: 30%;
     }
 }
 
 @media screen and (max-width: 768px) {
-    .whole-accolade {
+     .accolades {
         width: 100%;
+        padding: 0 5vw;
+     }
+}
+
+@media screen and (max-width: 650px) {
+    .whole-accolade {
+        width: 40%;
     }
-    h2 {
-        font-size: 22px;
-    }
-    p {
-        font-size: 20px;
-    }
-    .accolade-title {
-        height: 15vh;
-    }
-    img {
-        height: 70%
-    }
-    h1 {
-        text-align: center;
+    .container {
+        padding-bottom: 5vh;
     }
 }
 
-@media screen and (max-width: 425px) {
-    .accolades {
-        padding: 10px;
+@media screen and (max-width: 500px) {
+    .whole-accolade {
+        width: 50%;
     }
+    h1 {
+        font-size: 60px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .whole-accolade {
+        width: 70%;
+    }
+    .accolades {
+        padding: 0;
+    }
+    .container {
+        padding: 0vh 5vw 5vh;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .accolades {
+        padding: 0 8vw;
+    }
+    .container {
+        width: 100%;
+    }
+
 }

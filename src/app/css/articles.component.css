@@ -1,7 +1,7 @@
 .articles {
   background-color: #606060;
   height: auto;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Libre Franklin", sans-serif;
   padding-right: 0;
   padding-bottom: 5vh;
   color: white;
@@ -143,14 +143,15 @@ button {
         width: 100%;
     }
     #bookmark > p {
-        font-size: 8px;
+        font-size: 13px;
     }
     #header {
         flex-wrap: wrap;
         padding-bottom: 2vh;
     }
     .articles {
-        padding: 4vh 4vw;
+        padding: 4vh 5vw;
+        width: 100%;
     }
     section {
         justify-content: center;
@@ -179,6 +180,19 @@ button {
     }
 }
 
+@media screen and (max-width: 450px) {
+  .articles {
+    padding: 4vh 0;
+  }
+  .container {
+    padding: 0 5vw;
+  }
+  #bookmark > p {
+    font-size: 12px;
+}
+
+}
+
 @media screen and (max-width: 375px) {
     .article {
         height: auto;
@@ -191,6 +205,9 @@ button {
     }
     img {
         height: 35%;
+    }
+    .body {
+      padding: 0 8vw;
     }
 }
 

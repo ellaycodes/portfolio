@@ -1,99 +1,138 @@
 .testimonials {
   background-color: #606060;
   color: white;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Libre Franklin", sans-serif;
   height: 100%;
   padding-bottom: 8vh;
+  display: flex;
+  justify-content: center;
 }
+
+.container {
+  width: 1300px;
+}
+
 h1 {
   text-transform: capitalize;
   font-size: 60px;
   margin: 0 0 10vh 0;
 }
 
+h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
 .card-section {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
   row-gap: 10vh;
 }
 
 .card {
-  width: clamp(200px, 40vw, 900px);
+  width: clamp(200px, 45%, 900px);
   max-width: 900px;
   display: flex;
-  column-gap: 2vw;
+  column-gap: 1vw;
 }
 
 img {
-    width: auto;
-    height: auto;
-    object-fit: cover;
+  width: auto;
+  height: auto;
+  object-fit: cover;
 }
 
-/* .person {
-line-height: 5px;
-} */
-
-/* .description {
-    line-height: 10px;
-} */
-
-@media screen and (min-width: 1440px) {
-    h2 {
-        font-size: 30px;
-        margin: 0;
-
-    }
-    .job-title {
-        font-size: 22px;
-        margin-top: 0;
-    }
-    .testimonial {
-        font-size: 22px;
-    }
+.job-title {
+  margin-top: 0;
+  font-style: italic;
 }
 
-@media screen and (max-width: 1100px) {
-    .card {
-        width: 100%;
-    }
-    .testimonials {
-        padding: 5vh 5vw;
-    }
-    h2 {
-        margin: 0;
-    }
-    .job-title {
-        margin-top: 0;
-    }
-    .testimonial {
-        font-size: 20px;
-    }
+.testimonial {
+  color: #bdbdbd;
+  line-height: 22px;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.title-container {
+  display: flex;
+  justify-content: flex-start;
+}
+
+@media screen and (max-width: 1024px) {
+  .card-section {
+    width: 70%;
+    row-gap: 5vh;
+  }
+  .card {
+    width: 100%;
+    column-gap: 2vw;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .title-container {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 768px) {
-    .testimonials {
-        padding: 5vh 5vw;
-    }
-    .card {
-        flex-direction: column;
-        width: clamp(300px, 40vw, 900px);
-    }
-    h2 {
-        margin-top: 16px;
-    }
+  .testimonials {
+    padding: 5vh 5vw;
+    width: 100%;
+  }
+  .card-section {
+    width: 90%;
+  }
+  .card {
+    justify-content: space-around;
+  }
+  img {
+    width: 30%;
+  }
+  .description {
+    width: 60%;
+  }
 }
 
-@media screen and (max-width: 700px) {
-    .card {
-        flex-direction: column;
-        width: 100%;
-    }
-    h1 {
-        font-size: 40px;
-    }
-    .testimonial {
-        font-size: 22px;
-    }
+@media screen and (max-width: 500px) {
+  img {
+    width: unset;
+  }
+  .description {
+    width: unset;
+  }
+  .card {
+    flex-wrap: wrap;
+    justify-content: start;
+    gap: 2vh;
+  }
+  h1 {
+    margin-bottom: 30px;
+  }
 }
+
+@media screen and (max-width: 450px) {
+  h1 {
+    font-size: 50px;
+  }
+  .testimonials {
+    padding: 5vh 0vw;
+  }
+  .container {
+    padding: 0 5vw;
+  }
+}
+
+@media screen and (max-width: 375px) {
+    .body {
+      padding: 5vh 8vw;
+    }
+  }
