@@ -212,7 +212,7 @@ button {
 
 @media screen and (max-width: 375px) {
   .article {
-    height: auto;
+    padding: 2vh 0;
   }
   h1 {
     margin-bottom: 2vh;

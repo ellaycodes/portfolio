@@ -112,9 +112,6 @@ p {
   .container {
     gap: 2vh;
   }
-  .body {
-    height: 70vh;
-  }
 }
 
 @media screen and (max-width: 375px) {
