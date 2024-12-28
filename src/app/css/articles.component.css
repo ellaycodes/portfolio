@@ -9,7 +9,7 @@
   justify-content: center;
 }
 .container {
-    width: 1440px;
+  width: 1440px;
 }
 #header {
   display: flex;
@@ -35,7 +35,26 @@
   font-weight: bold;
   margin: 0;
   text-transform: uppercase;
+  color: white;
+  text-decoration: underline;
 }
+
+a:visited {
+  color: lightgray;
+}
+
+button:hover {
+  cursor: pointer;
+  transition-duration: 0.4s;
+  background-color: lightgray;
+  color: #606060;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+button:active {
+  background-color: black;
+}
+
 section {
   display: flex;
   flex-wrap: wrap;
@@ -78,33 +97,32 @@ button {
 }
 
 @media screen and (min-width: 1441px) {
-    .articles {
-        padding-left: 0;
-    }
+  .articles {
+    padding-left: 0;
+  }
 }
 
-
 @media screen and (max-width: 1440px) {
-    .container {
-        width: 100%;
-    }
-    button {
-        padding: 1vh 4vw;
-      }
-      .title {
-        font-size: 20px;
-      }
-      img {
-        height: 40%;
-      }
-      .article {
-        width: 25vw;
-        height: fit-content;
-      }
-      section {
-        justify-content: start;
-        column-gap: 5vw;
-      }
+  .container {
+    width: 100%;
+  }
+  button {
+    padding: 1vh 4vw;
+  }
+  .title {
+    font-size: 20px;
+  }
+  img {
+    height: 40%;
+  }
+  .article {
+    width: 25vw;
+    height: fit-content;
+  }
+  section {
+    justify-content: start;
+    column-gap: 5vw;
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -135,50 +153,49 @@ button {
   }
   .articles {
     padding-left: 7vw;
-
   }
 }
 
 @media screen and (max-width: 768px) {
-    #bookmark {
-        width: 100%;
-    }
-    #bookmark > p {
-        font-size: 13px;
-    }
-    #header {
-        flex-wrap: wrap;
-        padding-bottom: 2vh;
-    }
-    .articles {
-        padding: 4vh 5vw;
-        width: 100%;
-    }
-    section {
-        justify-content: center;
-    }
+  #bookmark {
+    width: 100%;
+  }
+  #bookmark > p {
+    font-size: 13px;
+  }
+  #header {
+    flex-wrap: wrap;
+    padding-bottom: 2vh;
+  }
+  .articles {
+    padding: 4vh 5vw;
+    width: 100%;
+  }
+  section {
+    justify-content: center;
+  }
 }
 
 @media screen and (max-width: 500px) {
-    img {
-        height: 45%;
-    }
-    .title {
-        font-size: 16px;
-        text-transform: capitalize;
-        letter-spacing: 0;
-    }
-    .article {
-        width: 80%;
-        height: fit-content;
-    }
-    .article > p {
-        font-size: 12px;
-        padding-bottom: 0;
-    }
-    section {
-        row-gap: 2vh;
-    }
+  img {
+    height: 45%;
+  }
+  .title {
+    font-size: 16px;
+    text-transform: capitalize;
+    letter-spacing: 0;
+  }
+  .article {
+    width: 80%;
+    height: fit-content;
+  }
+  .article > p {
+    font-size: 12px;
+    padding-bottom: 0;
+  }
+  section {
+    row-gap: 2vh;
+  }
 }
 
 @media screen and (max-width: 450px) {
@@ -190,30 +207,29 @@ button {
   }
   #bookmark > p {
     font-size: 12px;
-}
-
+  }
 }
 
 @media screen and (max-width: 375px) {
-    .article {
-        height: auto;
-    }
-    h1 {
-        margin-bottom: 2vh;
-    }
-    .title {
-        font-size: 14px;
-    }
-    img {
-        height: 35%;
-    }
-    .body {
-      padding: 0 8vw;
-    }
+  .article {
+    height: auto;
+  }
+  h1 {
+    margin-bottom: 2vh;
+  }
+  .title {
+    font-size: 14px;
+  }
+  img {
+    height: 35%;
+  }
+  .body {
+    padding: 0 8vw;
+  }
 }
 
 @media screen and (max-width: 320px) {
-    .article {
-        width: 90%;
-    }
+  .article {
+    width: 90%;
+  }
 }

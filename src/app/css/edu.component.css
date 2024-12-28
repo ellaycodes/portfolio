@@ -1,7 +1,6 @@
 .edu {
     background-color: #edf0f2;
     font-family: "Libre Franklin", sans-serif;
-    letter-spacing: -1px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -27,15 +26,38 @@ h1 {
     width: 40%;
 }
 
+.card {
+    width: 60%;
+}
+
 .description {
     font-size: clamp(15px, 130%, 30px);
     font-weight: 100;
     line-height: 1.4;
     width: 80%;
+    color: #606060;
 }
 
 .qualification {
     border-top: 1px solid #000;
+}
+
+.qualification_institution {
+    color: #606060;
+    letter-spacing: 0px;
+    font-size: 14px;
+}
+
+.qualification_title {
+    margin-bottom: 0;
+    font-size: 18px;
+}
+
+.qualification_description {
+    color: #606060;
+    letter-spacing: 0px;
+    font-size: 16px;
+    margin-top: 3vh;
 }
 
 @media screen and (max-width: 1440px) {

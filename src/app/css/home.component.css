@@ -37,7 +37,7 @@
 
 h1,
 p {
-  font-size: 5em;
+  font-size: 4em;
   text-shadow: #000 3px 3px 7px;
 }
 
@@ -188,13 +188,13 @@ body {
   .arrows:before {
     border-left: 10px solid rgba(255, 255, 255, 0.7);
     border-bottom: 10px solid rgba(255, 255, 255, 0.7);
-    transform: translate(10px, 80px) rotate(-45deg); /* Consistent with keyframes */
+    transform: translate(10px, 80px) rotate(-45deg);
   }
 
   .arrows:after {
     border-left: 10px solid rgba(255, 255, 255, 0.7);
     border-bottom: 10px solid rgba(255, 255, 255, 0.7);
-    transform: translate(40px, 0) rotate(-45deg); /* Ensure alignment matches */
+    transform: translate(40px, 0) rotate(-45deg); 
   }
   #main {
     padding: 0 8vw;
