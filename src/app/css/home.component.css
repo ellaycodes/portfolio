@@ -1,9 +1,9 @@
 .heroContent {
   border: 2px solid white;
-  height: 70%;
+  height: auto;
   width: 50%;
   border-bottom: 0;
-  padding: 1vh 3vw 1vh 1vw;
+  padding: 1vh 3vw 5vh 1vw;
   display: flex;
   flex-direction: column;
   gap: 10vh;
@@ -18,7 +18,7 @@
 
 #main {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("/assets/1678862323981-transformed.jpeg");
+    url("/assets/speech2.jpeg");
   background-repeat: no-repeat;
   height: clamp(900px, 70vh, 2000px);
   background-size: cover;
@@ -62,6 +62,7 @@ body {
   width: 100%;
   display: flex;
   justify-content: center;
+  height: 15vh;
 }
 
 .arrows {

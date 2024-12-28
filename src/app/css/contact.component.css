@@ -82,6 +82,7 @@ a:visited {
   .info {
     flex-wrap: wrap;
     padding: 0 5vw 2vh;
+    height: auto;
   }
   .container {
     width: 100%;
