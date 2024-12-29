@@ -210,7 +210,7 @@ button {
     letter-spacing: 0;
   }
   .article {
-    width: 80%;
+    width: 60%;
     height: fit-content;
   }
   .article > p {
@@ -220,23 +220,29 @@ button {
   section {
     row-gap: 2vh;
   }
+  h1 {
+    font-size: 30px;
+  }
 }
 
 @media screen and (max-width: 450px) {
   .articles {
     padding: 4vh 0;
   }
-  .container {
-    padding: 0 5vw;
-  }
   #bookmark > p {
     font-size: 12px;
+  }
+  h1 {
+    padding-left: 5vw;
+  }
+  section {
+    padding-left: 5vw;
   }
 }
 
 @media screen and (max-width: 375px) {
   .article {
-    padding: 2vh 0;
+    padding: 2vh;
   }
   h1 {
     margin-bottom: 2vh;
