@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, signal } from "@angular/core";
 
 @Component({
     selector: 'education',
@@ -9,5 +9,5 @@ import { Component } from "@angular/core";
 })
 
 export class Education {
-
+    title = signal('Education')
 }

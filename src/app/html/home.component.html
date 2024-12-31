@@ -1,11 +1,11 @@
-<section id="main">
+<section id="main" *ngIf="homePage$ | async as homePage">
     <div class="container">
         <div class="heroContent">
             <div>
-                <p class="jobTitle">Professor of Accounting <strong>Aston University</strong></p>
+                <p class="jobTitle">{{homePage.items[0].fields.nameOfPosition}} <strong>{{homePage.items[0].fields.companyName}}</strong></p>
                 <div>
-                    <h1>Prof. Kemi C Yekini</h1>
-                    <p>Portfolio</p>
+                    <h1>{{homePage.items[0].fields.name}}</h1>
+                    <p>{{homePage.items[0].fields.typeOfWebsite}}</p>
                 </div>
             </div>
             <div class="arrowsDiv">
