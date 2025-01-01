@@ -1,25 +1,14 @@
-<div class="bio body">
+<div class="bio body" *ngIf="bio$ | async as bio">
     <div class="container">
         <section class="img">
-            <img src="/assets/1678862323981-transformed.jpeg" />
+            <img [src]="bio.items[0].fields.mainImage.fields.file.url" />
         </section>
         <section class="text">
-            <div class="divider">
-                <p class="divider_title">bio</p>
-                <p class="divider_content">Professor Kemi Yekini is a professor of Accounting at Aston Business School, Aston University. She holds
-                    a
-                    PhD in Accounting and Finance, an MSc in Finance, and a BSc in Accounting. As a chartered accountant
-                    (ICAN)
-                    and certified fraud examiner (CFE), she has contributed significantly to academic research in her field,
-                    publishing extensively in highly-ranked international journals. Her academic career spans roles such as founder and director of research centre, 
-                    director of doctoral studies and programme director. She is recognized for her sustainability,
-                    governance,
-                    and corporate social responsibility research leadership.</p>
-                </div>
-                <div class="divider">
-                    <p class="divider_title">my approach</p>
-                    <p class="divider_content">As an academic and a professional, my passion has always been to bridge the gap between theory and practice in the field of accounting and finance. Through research, teaching, and collaboration with industry, I strive to foster a deeper understanding of corporate governance, sustainability, and ethical transparency. My mission is to inspire future leaders to uphold these principles.</p>
-                </div>
-            </section>
-        </div>
+            <div class="divider"  *ngFor="let each of bio.items[0].fields.bio">
+                <p class="divider_title">{{each.fields.title}}</p>
+                <p class="divider_content">{{each.fields.description.content[0].content[0].value}}
+                </p>
+            </div>
+        </section>
+    </div>
 </div>

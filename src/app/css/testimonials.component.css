@@ -1,6 +1,6 @@
 .testimonials {
-  background-color: #606060;
-  color: white;
+  background-color: #edf0f2;
+  color: black;
   font-family: "Libre Franklin", sans-serif;
   height: 100%;
   padding-bottom: 8vh;
@@ -51,7 +51,7 @@ img {
 }
 
 .testimonial {
-  color: #bdbdbd;
+  color: #525252;
   line-height: 22px;
 }
 

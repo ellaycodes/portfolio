@@ -1,23 +1,20 @@
-<div class="contact body">
+<div class="contact body" *ngIf="contact$ | async as contact">
     <div class="container">
-        <div class="img">
+        <!-- <div class="img">
+        TODO: this to be made into a gallery and moved directly below the accolades.
             <img src="/assets/contact.jpeg" />
             <p>Invited as an expert by the United Nations to review the Economic Reports on Africa (17-19 Jan, 2020) Johannesburg, South Africa.</p>
-        </div>
+        </div> -->
         <div class="info">
-            <h1>Thank You</h1>
+            <h1>{{contact.items[0].fields.thankYouText}}</h1>
             <div class="details">
-                <p class="title">Contact</p>
-                <p id="name">Kemi C Yekini. PhD</p>
-                <div id="emails">
-                    <a href="mailto:kyekini@hotmail.co.uk">
-                        <p>kyekini&#64;hotmail.co.uk</p>
-                    </a>
-                    <a href="mailto:k.yekini@aston.ac.uk">
-                        <p>k.yekini&#64;aston.ac.uk</p>
+                <p class="title">{{contact.items[0].fields.contactTitle}}</p>
+                <p id="name">{{contact.items[0].fields.name}}</p>
+                <div id="emails" *ngFor="let contactMethod of contact.items[0].fields.contactMethod">
+                    <a [href]="'mailto:' + contactMethod.fields.value">
+                        <p>{{contactMethod.fields.value}}</p>
                     </a>
                 </div>
-
             </div>
         </div>
     </div>

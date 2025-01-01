@@ -1,95 +1,23 @@
-<div class="articles body">
+<div class="articles body" *ngIf="articles$ | async as articles">
     <div class="container">
-        <div id="header">
-            <h1>Blogs</h1>
-            <!-- <div id="bookmark">
-                <a href="https://scholar.google.com/citations?user=7CyfrNsAAAAJ&hl=en">
-                    <p>
-                        Google Scholar Webpage - Articles and Citations
-                    </p>
-                </a>
-                <a href="https://www.researchgate.net/profile/Kemi-Yekini">
-                    <p>
-                        ResearchGate webpage
-                    </p>
-                </a>
-            </div> -->
-        </div>
-        <section>
-            <div class="article">
-                <img src="/assets/articleimg1.jpeg" />
-                <h2 class="title">A theoretical model for measuring CSR/sustainability reports quality.</h2>
-                <div class="source">
-                    <p>Business & Society, May 2019, SAGE Publications</p>
-                    <p>DOI: 10.1177/0007650319843623
-                    </p>
-                </div>
-                <p>This article presents a semiotics-based model to evaluate the quality of CSR reports by analyzing the
-                    language used. The model helps assess the transparency and accuracy of CSR communication, offering
-                    both
-                    qualitative and quantitative tools to improve corporate sustainability reporting.</p>
-                <a href="https://www.growkudos.com/publications/10.1177%25252F0007650319843623/reader">
-                    <button>Read More</button>
-                </a>
+        <section class='article-container' *ngFor="let article of articles.items">
+            <div id="header">
+                <h1>{{article.fields.title}}</h1>
             </div>
-            <div class="article">
-                <img src="/assets/articleimg1.jpeg" />
-                <h2 class="title">Making sense of CSR reports the semiotic way</h2>
-                <div class="source">
-                    <p>Business & Society, November 2023, Journal Article</p>
+            <section class="article-cards">
+                <div class="article" *ngFor="let articleCard of article.fields.articleCards">
+                    <img [src]="articleCard.fields.image.fields.file.url" />
+                    <h2 class="title">{{articleCard.fields.title}}</h2>
+                    <div class="source">
+                        <p>{{articleCard.fields.publicationName}}</p>
+                        <p>{{articleCard.fields.doi}}</p>
+                    </div>
+                    <p>{{articleCard.fields.description.content[0].content[0].value}}</p>
+                    <a [href]="articleCard.fields.articleUrl">
+                        <button>Read More</button>
+                    </a>
                 </div>
-                <p>This page discusses how semiotics can enhance corporate social responsibility (CSR) communication by
-                    analyzing language and symbolism to convey authentic values, building stakeholder trust and
-                    improving investment or customer loyalty.</p>
-                <a
-                    href="https://businessandsociety.org/semiotic-way/#:~:text=It%20is%20an%20opportunity%20for,investment%20or%20fostering%20customer%20loyalty">
-                    <button>Read More</button>
-                </a>
-            </div>
-
-        </section>
-        <h1>Encyclopedia Contributions</h1>
-        <section>
-            <div class="article">
-                <img src="/assets/encyclopedia.png" />                <h2 class="title">Making Sense of CSR Reports: A Methodological Perspective from Semiotics</h2>
-                <div class="source">
-                    <p>Encyclopedia of Sustainable Management. Springer</p>
-                    <p>https://doi.org/10.1007/978-3-030-02006-4_1159-1
-                    </p>
-                </div>
-                <p>This page highlights the use of semiotics to assess the quality of corporate social responsibility
-                    (CSR) reports, focusing on how language and symbols reveal corporate transparency and ethical
-                    values. It helps companies align their messaging with societal expectations to build trust.</p>
-                <a href="https://link.springer.com/referenceworkentry/10.1007/978-3-030-02006-4_1159-1#citeas">
-                    <button>Read More</button>
-                </a>
-            </div>
-            <div class="article">
-                <img src="/assets/encyclopedia.png" />                <h2 class="title">Corporate Community Involvement</h2>
-                <div class="source">
-                    <p>Encyclopedia of Sustainable Management. Springer</p>
-                    <p>https://doi.org/10.1007/978-3-030-02006-4_346-1
-                    </p>
-                </div>
-                <p>This page highlights that Corporate Community Involvement (CCI) refers to businesses' engagement in societal initiatives aimed at meeting the needs of the communities in which they operate.</p>
-                <a href="https://link.springer.com/referenceworkentry/10.1007/978-3-030-02006-4_346-1">
-                    <button>Read More</button>
-                </a>
-            </div>
-            <div class="article">
-                <img src="/assets/encyclopedia.png" />
-                <h2 class="title">CSR Disclosure, Quality Measurement of</h2>
-                <div class="source">
-                    <p>Encyclopedia of Sustainable Management. Springer</p>
-                    <p>https://doi.org/10.1007/978-3-030-02006-4_344-1
-                    </p>
-                </div>
-                <p>This page highlights that measuring the quality of Corporate Social Responsibility (CSR) disclosures is complex, with scholars debating definitions and metrics; recent perspectives suggest that the clarity and meaningfulness of disclosed information to users should define its quality.</p>
-                <a href="https://link.springer.com/referenceworkentry/10.1007/978-3-030-02006-4_344-1">
-                    <button>Read More</button>
-                </a>
-            </div>
-
+            </section>
         </section>
     </div>
 </div>

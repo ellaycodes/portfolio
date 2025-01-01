@@ -19,9 +19,9 @@ import { Work } from './work.component';
     <bio class="section"/>
     <education class="section"/>
     <work class="section"/>
-    <testimonials class="section"/>
     <accolades class="section"/>
     <articles class="section"/>
+    <testimonials class="section"/>
     <contact class="section"/>
   `,
   styleUrl: './css/app.component.css',
@@ -29,12 +29,5 @@ import { Work } from './work.component';
 
 export class BodyComponent {
   title = 'Body';
-
-//   constructor(elementRef: ElementRef) {
-//     console.log(elementRef)
-//     afterRender(() => {
-
-//     })
-//   }
 
 }

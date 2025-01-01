@@ -1,13 +1,23 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from '@angular/core';
+import { ContentfulService } from './contentful.service';
+import { Observable } from 'rxjs';
+import { CommonModule } from '@angular/common';
 
 @Component({
-    selector: 'accolades',
-    standalone: true,
-    imports: [],
-    templateUrl: './html/accolades.component.html',
-    styleUrls: ['./css/app.component.css', './css/accolades.component.css'],
+  selector: 'accolades',
+  standalone: true,
+  imports: [CommonModule],
+  templateUrl: './html/accolades.component.html',
+  styleUrls: ['./css/app.component.css', './css/accolades.component.css'],
 })
+export class Accolades implements OnInit {
+  constructor(private contentfulService: ContentfulService) {}
 
-export class Accolades {
+  accolades$: Observable<any> | undefined;
 
+  ngOnInit(): void {
+    const contentTypeId = 'accoladesPage';
+    this.accolades$ =
+      this.contentfulService.getEntriesByContentType(contentTypeId);
+  }
 }

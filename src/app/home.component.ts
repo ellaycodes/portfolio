@@ -17,6 +17,7 @@ export class Home implements OnInit {
   homePage$: Observable<any> | undefined;
 
   ngOnInit(): void {
-    this.homePage$ = this.contentfulService.getAllEntries();
+    const contentTypeId = 'landingPage';
+    this.homePage$ = this.contentfulService.getEntriesByContentType(contentTypeId);
   }
 }

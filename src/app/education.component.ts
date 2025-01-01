@@ -1,13 +1,24 @@
-import { Component, signal } from "@angular/core";
+import { Component, OnInit, signal } from "@angular/core";
+import { ContentfulService } from "./contentful.service";
+import { Observable } from "rxjs";
+import { CommonModule } from "@angular/common";
 
 @Component({
     selector: 'education',
     standalone: true,
-    imports: [],
+    imports: [CommonModule],
     templateUrl: './html/edu.component.html',
     styleUrls: ['./css/app.component.css', './css/edu.component.css'],
 })
 
-export class Education {
+export class Education implements OnInit{
     title = signal('Education')
+    constructor(private contentfulService: ContentfulService) {}
+    
+      edu$: Observable<any> | undefined;
+    
+      ngOnInit(): void {
+        const contentTypeId = 'educationPage';
+        this.edu$ = this.contentfulService.getEntriesByContentType(contentTypeId);
+      }
 }

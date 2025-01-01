@@ -1,72 +1,16 @@
-<div class="work body">
+<div class="work body" *ngIf="work$ | async as work">
     <div class="container">
-        <h1>Body of Work</h1>
+        <h1>{{work.items[0].fields.title}}</h1>
         <section class="card-section">
-            <div class="card">
+            <div class="card" *ngFor="let workCard of work.items[0].fields.workExperienceCard">
                 <div class="card-title">
-                    <p class="date">2023 to date</p>
-                    <h2 class="job-title">Professor of Accounting</h2>
+                    <p class="date">{{workCard.fields.dateFrom}}</p>
+                    <h2 class="job-title">{{workCard.fields.jobTitle}}</h2>
                 </div>
                 <div>
-
-                    <img src="/assets/Aston-University-1.png">
+                    <img [src]="workCard.fields.logo.fields.file.url">
                 </div>
-                <p class="caption">Aston Business School, <strong>Aston University</strong></p>
-            </div>
-            <div class="card">
-                <div class="card-title">
-                    <p class="date">2019 - 2023</p>
-                    <h2 class="job-title">Professor of Accounting</h2>
-                </div>
-                <div>
-
-                    <img src="/assets/soas.jpg">
-                </div>
-                <p class="caption">School of Finance and Management, <strong>SOAS University of London</strong></p>
-            </div>
-            <div class="card">
-                <div class="card-title">
-                    <p class="date">2017 - 2019</p>
-                    <h2 class="job-title">Associate Professor of Accounting</h2>
-                </div>
-                <div>
-                    <img src="/assets/notts.jpg">
-                </div>
-                <p class="caption">Nottingham University Business School (NUBS), <strong>University of
-                        Nottingham</strong></p>
-            </div>
-            <div class="card">
-                <div class="card-title">
-                    <p class="date">2009 - 2017</p>
-                    <h2 class="job-title">Lecturer, Senior Lecturer and later Associate Professor in Accounting</h2>
-                </div>
-                <div>
-
-                    <img src="/assets/dmu.png">
-                </div>
-                <p class="caption">Leicester Business School, <strong>De Montfort University</strong></p>
-            </div>
-            <div class="card">
-                <div class="card-title">
-                    <p class="date">2011 - 2014</p>
-                    <h2 class="job-title">Associate Tutor in Accounting (Part-time)</h2>
-                </div>
-                <div>
-                    <img id='uni-of-leicester' src="/assets/leicester_uni_logo.png">
-                </div>
-                <p class="caption">School of Management, <strong>University of Leicester</strong></p>
-            </div>
-            <div class="card">
-                <div class="card-title">
-                    <p class="date">2008 - 2009</p>
-                    <h2 class="job-title">Assistant Group Management Accountant</h2>
-                </div>
-                <div>
-
-                    <img src="/assets/lifeatnext_logo.jpeg">
-                </div>
-                <p class="caption">NEXT PLC. Enderby, Leicester</p>
-                
+                <p class="caption">{{workCard.fields.company}}</p>
             </div>
         </section>
     </div>
