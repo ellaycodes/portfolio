@@ -3,16 +3,27 @@
         <div class="title-container">
             <h1>{{testimonials.items[0].fields.title}}</h1>
         </div>
-        <section class="card-section">
-            <div class="card" *ngFor="let testimonial of testimonials.items[0].fields.testimonial">
-                <div class="description">
-                    <div class="person">
-                        <h2>{{testimonial.fields.name}}</h2>
-                        <p class="job-title">{{testimonial.fields.jobTitle}}</p>
+        <div class="card-wrapper">
+            <section class="card-section">
+                <div class="card" *ngFor="let testimonial of testimonials.items[0].fields.testimonial">
+                    <div class="description">
+                        <div class="person">
+                            <h2>{{testimonial.fields.name}}</h2>
+                            <p class="job-title">{{testimonial.fields.jobTitle}}</p>
+                        </div>
+                        <p class="testimonial">{{testimonial.fields.testimonialContent.content[0].content[0].value}}</p>
                     </div>
-                    <p class="testimonial">{{testimonial.fields.testimonialContent.content[0].content[0].value}}</p>
                 </div>
-            </div>
-        </section>
+                <div class="card" *ngFor="let testimonial of testimonials.items[0].fields.testimonial">
+                    <div class="description">
+                        <div class="person">
+                            <h2>{{testimonial.fields.name}}</h2>
+                            <p class="job-title">{{testimonial.fields.jobTitle}}</p>
+                        </div>
+                        <p class="testimonial">{{testimonial.fields.testimonialContent.content[0].content[0].value}}</p>
+                    </div>
+                </div>
+            </section>
+        </div>
     </div>
 </div>

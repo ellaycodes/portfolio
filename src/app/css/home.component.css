@@ -1,6 +1,7 @@
 .heroContent {
   border: 2px solid white;
   height: auto;
+  min-height: 500px;
   width: 50%;
   border-bottom: 0;
   padding: 1vh 3vw 5vh 1vw;
@@ -17,8 +18,7 @@
 }
 
 #main {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("/assets/speech2.jpeg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), var(--bg-img, url("/assets/speech2.jpeg"));
   background-repeat: no-repeat;
   height: clamp(900px, 70vh, 2000px);
   background-size: cover;
@@ -122,7 +122,7 @@ body {
   }
   h1,
   p {
-    font-size: 3.5em;
+    font-size: 3em;
   }
   .heroContent {
     gap: 15vh;
@@ -157,10 +157,13 @@ body {
   }
   h1,
   p {
-    font-size: 12vw;
+    font-size: 10vw;
   }
   .jobTitle {
     font-size: 3vw;
+  }
+  .heroContent {
+    min-height: auto;
   }
 }
 
@@ -181,7 +184,7 @@ body {
     justify-content: center;
   }
   h1 {
-    font-size: 11vw;
+    font-size: 9vw;
   }
 }
 
@@ -195,7 +198,7 @@ body {
   .arrows:after {
     border-left: 10px solid rgba(255, 255, 255, 0.7);
     border-bottom: 10px solid rgba(255, 255, 255, 0.7);
-    transform: translate(40px, 0) rotate(-45deg); 
+    transform: translate(40px, 0) rotate(-45deg);
   }
   #main {
     padding: 0 8vw;

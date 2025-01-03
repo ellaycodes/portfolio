@@ -7,6 +7,7 @@
   color: white;
   display: flex;
   justify-content: center;
+  overflow: hidden;
 }
 .container {
   width: 1440px;
@@ -36,7 +37,7 @@
   text-transform: uppercase;
   color: white;
   text-decoration: underline;
-}
+}*/
 
 a:visited {
   color: lightgray;
@@ -52,7 +53,7 @@ button:hover {
 
 button:active {
   background-color: black;
-} */
+} 
 
 .article-container {
   display: flex;
@@ -123,12 +124,12 @@ h1 {
   font-weight: bold;
 }
 
-/* button {
+ button {
   padding: 1vh 2vw;
   background-color: transparent;
   border: 2px solid #bdbdbd;
   color: #bdbdbd;
-} */
+} 
 
 @media screen and (min-width: 1441px) {
   .articles {

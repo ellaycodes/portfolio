@@ -1,8 +1,10 @@
-<section id="main" *ngIf="homePage$ | async as homePage">
+<section id="main" *ngIf="homePage$ | async as homePage" [style.--bg-img]="'url(' + backgroundImage + ')'">
     <div class="container">
         <div class="heroContent">
             <div>
-                <p class="jobTitle">{{homePage.items[0].fields.nameOfPosition}} <strong>{{homePage.items[0].fields.companyName}}</strong></p>
+                <p class="jobTitle">{{homePage.items[0].fields.nameOfPosition}}
+                    <strong>{{homePage.items[0].fields.companyName}}</strong>
+                </p>
                 <div>
                     <h1>{{homePage.items[0].fields.name}}</h1>
                     <p>{{homePage.items[0].fields.typeOfWebsite}}</p>

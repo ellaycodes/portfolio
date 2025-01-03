@@ -3,13 +3,14 @@
   color: black;
   font-family: "Libre Franklin", sans-serif;
   height: 100%;
-  padding-bottom: 8vh;
+  padding: 8vh 0;
   display: flex;
   justify-content: center;
+  overflow: hidden;
 }
 
 .container {
-  width: 1300px;
+  width: 100%;
 }
 
 h1 {
@@ -23,18 +24,47 @@ h2 {
   font-size: 18px;
 }
 
+.card-wrapper {
+  position: relative;
+  width: 100%;
+}
+
 .card-section {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  row-gap: 10vh;
+  flex-wrap: nowrap;
+  column-gap: 3vh;
+  animation: scroll 20s linear infinite;
+  animation-play-state: running;
+  width: calc(100% + 6vh);
+}
+
+.card-wrapper:hover .card-section {
+  animation-play-state: paused;
+  /* overflow-x: auto; 
+  overflow-y: hidden;
+  scroll-behavior: smooth; */
 }
 
 .card {
-  width: clamp(200px, 45%, 900px);
+  width: clamp(200px, 35%, 400px);
+  box-sizing: border-box;
   max-width: 900px;
   display: flex;
   column-gap: 1vw;
+  padding: 2vh;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px #525252;
+  flex: 0 0 auto;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-90%);
+  }
 }
 
 img {
@@ -58,12 +88,21 @@ img {
 .description {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .title-container {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
+}
+
+@media screen and (max-width: 1440px) {
+  /* .container {
+    width: 100%;
+  } */
+  .card {
+    padding: 1vh 2vh;
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -72,13 +111,14 @@ img {
     row-gap: 5vh;
   }
   .card {
-    width: 100%;
+    width: clamp(300px, 60%, 600px);
     column-gap: 2vw;
   }
   .container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
   }
   .title-container {
     width: 100%;
@@ -95,12 +135,33 @@ img {
   }
   .card {
     justify-content: space-around;
+    width: clamp(300px, 50%, 400px);
+    line-height: 15px;
   }
   img {
     width: 30%;
   }
   .description {
-    width: 60%;
+    width: 100%;
+  }
+  h2 {
+    font-size: 14px;
+  }
+  .job-title {
+    font-size: 14px;
+  }
+  .testimonial {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-300%);
+    }
   }
 }
 
@@ -115,6 +176,7 @@ img {
     flex-wrap: wrap;
     justify-content: start;
     gap: 2vh;
+    width: clamp(200px, 50%, 400px);
   }
   h1 {
     margin-bottom: 30px;
