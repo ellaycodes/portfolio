@@ -1,4 +1,4 @@
-<div class="articles body" *ngIf="articles$ | async as articles">
+<div class="articles body" *ngIf="articles$ | async as articles" [style.--bg-color]="backgroundColor">
     <div class="container">
         <section class='article-container' *ngFor="let article of articles.items">
             <div id="header">

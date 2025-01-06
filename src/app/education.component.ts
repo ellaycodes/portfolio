@@ -16,9 +16,14 @@ export class Education implements OnInit{
     constructor(private contentfulService: ContentfulService) {}
     
       edu$: Observable<any> | undefined;
+      backgroundColor: string = '';
     
       ngOnInit(): void {
         const contentTypeId = 'educationPage';
         this.edu$ = this.contentfulService.getEntriesByContentType(contentTypeId);
+
+        this.edu$.subscribe((data: any) => {
+            this.backgroundColor = data.items[0].fields.stylingOptions.fields.backgroundColor || ''
+          })
       }
 }

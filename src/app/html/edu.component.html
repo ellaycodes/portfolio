@@ -1,4 +1,4 @@
-<div class="edu body" *ngIf="edu$ | async as edu">
+<div class="edu body" *ngIf="edu$ | async as edu" [style.--bg-color]="backgroundColor">
     <div class="container">
         <section class="text">
             <h1>{{edu.items[0].fields.title}}</h1>

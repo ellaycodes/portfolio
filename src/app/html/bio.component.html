@@ -1,4 +1,4 @@
-<div class="bio body" *ngIf="bio$ | async as bio">
+<div class="bio body" *ngIf="bio$ | async as bio" [style.--bg-color]="backgroundColor">
     <div class="container">
         <section class="img">
             <img [src]="bio.items[0].fields.mainImage.fields.file.url" />

@@ -16,6 +16,7 @@ export class Contact implements OnInit{
     constructor(private contentfulService: ContentfulService) {}
     
       contact$: Observable<any> | undefined;
+      backgroundColor: string = '';
     
       ngOnInit(): void {
         const contentTypeId = 'contactPage';

@@ -1,4 +1,4 @@
-<div class="work body" *ngIf="work$ | async as work">
+<div class="work body" *ngIf="work$ | async as work" [style.--bg-color]="backgroundColor">
     <div class="container">
         <h1>{{work.items[0].fields.title}}</h1>
         <section class="card-section">

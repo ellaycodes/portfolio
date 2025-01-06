@@ -1,5 +1,5 @@
 .bio {
-    background-color: #2b2b2b;
+    background-color: var(--bg-color);
     display: flex;
     flex-wrap: wrap;
     color: white;

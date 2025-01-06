@@ -14,10 +14,15 @@ export class Accolades implements OnInit {
   constructor(private contentfulService: ContentfulService) {}
 
   accolades$: Observable<any> | undefined;
+  backgroundColor: string = '';
 
   ngOnInit(): void {
     const contentTypeId = 'accoladesPage';
     this.accolades$ =
       this.contentfulService.getEntriesByContentType(contentTypeId);
+
+      this.accolades$.subscribe((data: any) => {
+        this.backgroundColor = data.items[0].fields.stylingOptions.fields.backgroundColor || ''
+      })
   }
 }

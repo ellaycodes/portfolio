@@ -1,4 +1,7 @@
 <section id="main" *ngIf="homePage$ | async as homePage" [style.--bg-img]="'url(' + backgroundImage + ')'">
+    <!-- <pre>
+        {{homePage | json}}
+    </pre> -->
     <div class="container">
         <div class="heroContent">
             <div>
@@ -10,7 +13,7 @@
                     <p>{{homePage.items[0].fields.typeOfWebsite}}</p>
                 </div>
             </div>
-            <div class="arrowsDiv">
+            <div class="arrowsDiv" *ngIf="homePage.items[0].fields.arrows !== false">
                 <div class="arrows">
                 </div>
             </div>

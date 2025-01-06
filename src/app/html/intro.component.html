@@ -1,12 +1,19 @@
-<div class="intro body" *ngIf="intro$ | async as intro">
+<div class="intro body" *ngIf="intro$ | async as intro" [ngStyle]="getDynamicStyles()">
     <div class="container">
         <section class="text">
-            <h1>{{intro.items[0].fields.title}}</h1>
-            <p class="statement">{{intro.items[0].fields.description.content[0].content[0].value}}</p>
-            </section>
-            <section class="intro_portrait">
-                <img loading="eager" [src]="intro.items[0].fields.image.fields.file.url"/>
-                <p>{{intro.items[0].fields.caption}}</p>
-            </section>
-        </div>
+            <div id="bookmark" *ngIf="bookmark$ | async as bookmark">
+                <a [href]="one.fields.link" *ngFor="let one of bookmark.items[0].fields.bookmarkEntry">
+                    <p>{{one.fields.title}}</p>
+                </a>
+            </div>
+            <div class="description-container">
+                <h1>{{intro.items[0].fields.title}}</h1>
+                <p class="statement">{{intro.items[0].fields.description.content[0].content[0].value}}</p>
+            </div>
+        </section>
+        <section class="intro_portrait">
+            <img loading="eager" [src]="intro.items[0].fields.image.fields.file.url" />
+            <p>{{intro.items[0].fields.caption}}</p>
+        </section>
+    </div>
 </div>

@@ -1,5 +1,5 @@
 .articles {
-  background-color: #606060;
+  background-color: var(--bg-color);
   height: auto;
   font-family: "Libre Franklin", sans-serif;
   padding-right: 0;
@@ -17,27 +17,6 @@
   justify-content: space-between;
   align-items: center;
 }
-
-/* #bookmark {
-  color: #bdbdbd;
-  background-color: #2b2b2b;
-  padding: 2vh 2vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: auto;
-  min-width: 30%;
-  gap: 1vh;
-}
-
-#bookmark > p {
-  font-size: 20px;
-  font-weight: bold;
-  margin: 0;
-  text-transform: uppercase;
-  color: white;
-  text-decoration: underline;
-}*/
 
 a:visited {
   color: lightgray;

@@ -1,5 +1,5 @@
 .testimonials {
-  background-color: #edf0f2;
+  background-color: var(--bg-color);
   color: black;
   font-family: "Libre Franklin", sans-serif;
   height: 100%;

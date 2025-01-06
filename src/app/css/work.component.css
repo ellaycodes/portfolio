@@ -1,5 +1,5 @@
 .work {
-  background-color: #2b2b2b;
+  background-color: var(--bg-color);
   color: #ffffff;
   font-family: "Libre Franklin", sans-serif;
   padding-top: 8vh;

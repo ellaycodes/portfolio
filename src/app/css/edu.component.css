@@ -1,5 +1,5 @@
 .edu {
-    background-color: #edf0f2;
+    background-color: var(--bg-color);
     font-family: "Libre Franklin", sans-serif;
     display: flex;
     justify-content: center;

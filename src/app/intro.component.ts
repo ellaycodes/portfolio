@@ -14,9 +14,39 @@ export class Intro implements OnInit {
   constructor(private contentfulService: ContentfulService) {}
 
   intro$: Observable<any> | undefined;
+  bookmark$: Observable<any> | undefined;
+  backgroundColor: string = '';
+  bookmarkBg: string = '';
+  bmFontSize: number = 10;
+  bmFontColor: string = '';
 
   ngOnInit(): void {
     const contentTypeId = 'introductionPage';
+    const bookmarkId = 'bookmark';
+
     this.intro$ = this.contentfulService.getEntriesByContentType(contentTypeId);
+
+    this.bookmark$ = this.contentfulService.getEntriesByContentType(bookmarkId);
+
+    this.intro$.subscribe((data: any) => {
+      this.backgroundColor =
+        data.items[0].fields.stylingOptions.fields.backgroundColor || '';
+    });
+
+    this.bookmark$.subscribe((data: any) => {
+      this.bookmarkBg =
+        data.items[0].fields.stylingOptions.fields.backgroundColor || '';
+        this.bmFontSize = data.items[0].fields.stylingOptions.fields.fontSize;
+        this.bmFontColor = data.items[0].fields.stylingOptions.fields.fontColor
+    });
+  }
+
+  getDynamicStyles() {
+    return {
+      '--bg-color': this.backgroundColor,
+      '--bm-bg-color': this.bookmarkBg,
+      '--bm-font-size': this.bmFontSize + 'px',
+      '--bm-font-color': this.bmFontColor,
+    };
   }
 }

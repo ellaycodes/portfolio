@@ -15,9 +15,14 @@ export class Articles implements OnInit{
 constructor(private contentfulService: ContentfulService) {}
 
   articles$: Observable<any> | undefined;
+  backgroundColor: string = '';
 
   ngOnInit(): void {
     const contentTypeId = 'articlesPage';
     this.articles$ = this.contentfulService.getEntriesByContentType(contentTypeId);
+
+    this.articles$.subscribe((data: any) => {
+        this.backgroundColor = data.items[0].fields.stylingOptions.fields.backgroundColor || ''
+      })
   }
 }

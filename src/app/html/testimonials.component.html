@@ -1,4 +1,4 @@
-<div class="testimonials body" *ngIf="testimonials$ | async as testimonials">
+<div class="testimonials body" *ngIf="testimonials$ | async as testimonials" [style.--bg-color]="backgroundColor">
     <div class="container">
         <div class="title-container">
             <h1>{{testimonials.items[0].fields.title}}</h1>
