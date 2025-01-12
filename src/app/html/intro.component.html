@@ -1,11 +1,16 @@
 <div class="intro body" *ngIf="intro$ | async as intro" [ngStyle]="getDynamicStyles()">
+    <section class="bookmark-container">
+        <button class="bookmark-toggle" (click)="toggleBookmark()" [class.expanded]="isBookmarkExpanded">
+            {{ isBookmarkExpanded ? 'X' : 'Bookmarks' }}
+        </button>
+        <div id="bookmark" *ngIf="bookmark$ | async as bookmark" [class.expanded]="isBookmarkExpanded">
+            <a [href]="one.fields.link" *ngFor="let one of bookmark.items[0].fields.bookmarkEntry">
+                <p>{{one.fields.title}}</p>
+            </a>
+        </div>
+    </section>
     <div class="container">
         <section class="text">
-            <div id="bookmark" *ngIf="bookmark$ | async as bookmark">
-                <a [href]="one.fields.link" *ngFor="let one of bookmark.items[0].fields.bookmarkEntry">
-                    <p>{{one.fields.title}}</p>
-                </a>
-            </div>
             <div class="description-container">
                 <h1>{{intro.items[0].fields.title}}</h1>
                 <p class="statement">{{intro.items[0].fields.description.content[0].content[0].value}}</p>

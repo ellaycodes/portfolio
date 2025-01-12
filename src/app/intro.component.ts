@@ -10,9 +10,11 @@ import { CommonModule } from '@angular/common';
   templateUrl: './html/intro.component.html',
   styleUrls: ['./css/app.component.css', './css/intro.component.css'],
 })
+
 export class Intro implements OnInit {
   constructor(private contentfulService: ContentfulService) {}
 
+  isBookmarkExpanded: boolean = false;
   intro$: Observable<any> | undefined;
   bookmark$: Observable<any> | undefined;
   backgroundColor: string = '';
@@ -39,6 +41,10 @@ export class Intro implements OnInit {
         this.bmFontSize = data.items[0].fields.stylingOptions.fields.fontSize;
         this.bmFontColor = data.items[0].fields.stylingOptions.fields.fontColor
     });
+  }
+
+  toggleBookmark(): void {
+    this.isBookmarkExpanded = !this.isBookmarkExpanded;
   }
 
   getDynamicStyles() {
