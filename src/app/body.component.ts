@@ -8,11 +8,12 @@ import { Accolades } from './accolades.component';
 import { Education } from './education.component';
 import { Testimonials } from './testimonials.component'; 
 import { Work } from './work.component';
+import { Gallery } from "./gallery.component";
 
 @Component({
   selector: 'body-component',
   standalone: true,
-  imports: [Home, Intro, Bio, Articles, Contact, Accolades, Education, Testimonials, Work],
+  imports: [Home, Intro, Bio, Articles, Contact, Accolades, Education, Testimonials, Work, Gallery],
   template: `
     <home class="section"/>
     <intro class="section"/>
@@ -20,6 +21,7 @@ import { Work } from './work.component';
     <education class="section"/>
     <work class="section"/>
     <accolades class="section"/>
+    <gallery class="section"/>
     <articles class="section"/>
     <testimonials class="section"/>
     <contact class="section"/>

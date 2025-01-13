@@ -1,0 +1,80 @@
+.gallery {
+  font-family: "Libre Franklin", sans-serif;
+  height: auto;
+  padding-bottom: 10vh;
+}
+
+h1 {
+  font-size: 4em;
+  margin-top: 0;
+  letter-spacing: -4px;
+}
+
+.card-wrapper {
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.card-section {
+  width: 90%;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  transition: transform 0.5s ease-in-out;
+}
+
+.arrow {
+  font-size: 40px;
+  transition: color 0.3s;
+  padding: 0 1vh;
+  cursor: pointer;
+  width: 5%;
+  height: 100%;
+}
+
+.arrow:hover {
+  color: white;
+  background-color: #878787;
+}
+
+.card {
+  display: flex;
+  gap: 2vw;
+  padding: 2vh;
+  flex-wrap: nowrap;
+  overflow-x: hidden;
+  opacity: 0;
+  flex: 1;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  align-items: stretch;
+}
+
+.card-container {
+  width: 25vw;
+  border-radius: 5px;
+  box-shadow: 1px 2px 5px #878787;
+  padding: 2vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.img-container {
+    height: 60%;
+}
+
+.card[hidden] {
+  display: none;
+}
+
+.card:not([hidden]) {
+  opacity: 1;
+}
