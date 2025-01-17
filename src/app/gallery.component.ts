@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ContentfulService } from './contentful.service';
 import { Observable } from 'rxjs';
 import { CommonModule } from '@angular/common';
+import {marked} from 'marked';
 
 @Component({
   selector: 'gallery',
@@ -51,5 +52,9 @@ export class Gallery implements OnInit {
           ...images.slice(this.startIndex),
           ...images.slice(0, 3 - images.slice(this.startIndex).length),
         ];
+  }
+
+  markdown(description: string) {
+    return marked.parse(description)
   }
 }
