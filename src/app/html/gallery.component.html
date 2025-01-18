@@ -5,22 +5,19 @@
         </div>
         <div class="card-wrapper">
             <div class="prev arrow" (click)="prevImage()">↤</div>
-                    <section class="card-section">
-                        <div class="card"
-                            *ngFor="let imageCard of getVisibleImages(gallery.items[0].fields.contentCard)">
-                            <div class="card-container">
-                                <div class="img-container">
-                                    <img [src]="imageCard.fields.image.fields.file.url" alt="">
-                                </div>
-                                <div class="description-container">
-                                    <p class="description">
-                                        {{imageCard.fields.imageSummary}}
-                                    </p>
-                                </div>
-                            </div>
+            <section class="card-section">
+                <div class="card" *ngFor="let imageCard of getVisibleImages(gallery.items[0].fields.contentCard)">
+                    <div class="card-container">
+                        <div class="img-container">
+                            <img [src]="imageCard.fields.image.fields.file.url" alt="">
                         </div>
-                    </section>
-                    <div class="next arrow" (click)="nextImage()">↦</div>
-            </div>
+                        <div class="description-container">
+                            <p class="description">{{imageCard.fields.imageSummary}}</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="next arrow" (click)="nextImage()">↦</div>
         </div>
     </div>
+</div>

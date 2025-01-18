@@ -1,36 +1,78 @@
-import { Component, OnInit } from '@angular/core';
-import { ContentfulService } from './contentful.service';
+import {
+  Component,
+  OnInit,
+  Inject,
+  InjectionToken,
+  Optional,
+} from '@angular/core';
+// import { ContentfulService } from './contentful.service';
 import { Observable } from 'rxjs';
 import { CommonModule } from '@angular/common';
-import {marked} from 'marked';
+import { MarkdownService } from 'ngx-markdown';
+
+// export const CONTENTFUL_SERVICE = new InjectionToken<ContentfulService>(
+//   'ContentfulService'
+// );
+export const MARKDOWN_SERVICE = new InjectionToken<MarkdownService>(
+  'MarkdownService'
+);
 
 @Component({
-    selector: 'gallery',
-    standalone: true,
-    imports: [CommonModule],
-    templateUrl: './html/gallery.component.html',
-    styleUrls: ['./css/app.component.css', './css/gallery.component.css']
+  selector: 'gallery',
+  standalone: true,
+  imports: [CommonModule],
+  templateUrl: './html/gallery.component.html',
+  providers: [
+    // { provide: CONTENTFUL_SERVICE, useClass: ContentfulService },
+    { provide: MARKDOWN_SERVICE, useClass: MarkdownService },
+  ],
+  styleUrls: ['./css/app.component.css', './css/gallery.component.css'],
 })
 export class Gallery implements OnInit {
-  constructor(private contentfulService: ContentfulService) {}
-
   gallery$: Observable<any> | undefined;
   backgroundColor: string = '';
   startIndex: number = 0;
   galleryLength: number = 0;
 
-  ngOnInit(): void {
-    const contentTypeId = 'contentBlock';
-    this.gallery$ =
-      this.contentfulService.getEntriesByContentType(contentTypeId);
+  constructor(
+    // @Optional()
+    // @Inject(CONTENTFUL_SERVICE)
+    // private contentfulService: ContentfulService,
+    @Optional()
+    @Inject(MARKDOWN_SERVICE)
+    private markdownService: MarkdownService
+  ) {}
 
-    this.gallery$.subscribe((data: any) => {
-      this.backgroundColor =
-        data.items[0].fields.stylingOptions.fields.backgroundColor || '';
-      const gallery = data.items[0].fields.contentCard;
-      this.galleryLength = gallery.length;
-      console.log(this.galleryLength);
-    });
+  ngOnInit(): void {
+    // if (this.contentfulService) {
+    //   this.getContent();
+    // }
+    if (this.markdownService) {
+      this.implementMarkdown();
+    }
+  }
+
+  // getContent(): void {
+  //   const contentTypeId = 'contentBlock';
+  //   this.gallery$ =
+  //     this.contentfulService.getEntriesByContentType(contentTypeId);
+
+  //   this.gallery$.subscribe({
+  //     next: (data: any) => {
+  //       this.backgroundColor =
+  //         data.items[0].fields.stylingOptions.fields.backgroundColor || '';
+  //       const gallery = data.items[0].fields.contentCard;
+  //       this.galleryLength = gallery.length;
+  //       console.log(this.galleryLength);
+  //     },
+  //     error: (err) => {
+  //       console.error('Error fetching content:', err);
+  //     },
+  //   });
+  // }
+
+  implementMarkdown(): void {
+    console.log(this.markdownService.parse('# Test'));
   }
 
   prevImage(): void {
@@ -53,8 +95,4 @@ export class Gallery implements OnInit {
           ...images.slice(0, 3 - images.slice(this.startIndex).length),
         ];
   }
-
-  // markdown(description: string) {
-  //   return marked.parse(description)
-  // }
 }
