@@ -8,7 +8,7 @@ import { CommonModule } from "@angular/common";
     standalone: true,
     imports: [CommonModule],
     templateUrl: './html/bio.component.html',
-    styleUrls: ['./css/app.component.css', './css/bio.component.css'],
+    styleUrls: ['./css/app.component.css', './css/bio.component.css']
 })
 
 export class Bio implements OnInit{

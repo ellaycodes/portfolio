@@ -5,11 +5,11 @@ import { CommonModule } from '@angular/common';
 import {marked} from 'marked';
 
 @Component({
-  selector: 'gallery',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './html/gallery.component.html',
-  styleUrls: ['./css/app.component.css', './css/gallery.component.css'],
+    selector: 'gallery',
+    standalone: true,
+    imports: [CommonModule],
+    templateUrl: './html/gallery.component.html',
+    styleUrls: ['./css/app.component.css', './css/gallery.component.css']
 })
 export class Gallery implements OnInit {
   constructor(private contentfulService: ContentfulService) {}
@@ -54,7 +54,7 @@ export class Gallery implements OnInit {
         ];
   }
 
-  markdown(description: string) {
-    return marked.parse(description)
-  }
+  // markdown(description: string) {
+  //   return marked.parse(description)
+  // }
 }

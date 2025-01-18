@@ -9,7 +9,7 @@ import { CommonModule } from "@angular/common";
     standalone: true,
     imports: [CommonModule],
     templateUrl: './html/work.component.html',
-    styleUrls: ['./css/app.component.css', './css/work.component.css'],
+    styleUrls: ['./css/app.component.css', './css/work.component.css']
 })
 
 export class Work implements OnInit{

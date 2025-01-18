@@ -9,7 +9,7 @@ import { CommonModule } from "@angular/common";
     standalone: true,
     imports: [CommonModule],
     templateUrl: './html/contact.component.html',
-    styleUrls: ['./css/app.component.css', './css/contact.component.css'],
+    styleUrls: ['./css/app.component.css', './css/contact.component.css']
 })
 
 export class Contact implements OnInit{

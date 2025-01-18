@@ -11,10 +11,10 @@ import { Work } from './work.component';
 import { Gallery } from "./gallery.component";
 
 @Component({
-  selector: 'body-component',
-  standalone: true,
-  imports: [Home, Intro, Bio, Articles, Contact, Accolades, Education, Testimonials, Work, Gallery],
-  template: `
+    selector: 'body-component',
+    standalone: true,
+    imports: [Home, Intro, Bio, Articles, Contact, Accolades, Education, Testimonials, Work, Gallery],
+    template: `
     <home class="section"/>
     <intro class="section"/>
     <bio class="section"/>
@@ -26,7 +26,7 @@ import { Gallery } from "./gallery.component";
     <testimonials class="section"/>
     <contact class="section"/>
   `,
-  styleUrl: './css/app.component.css',
+    styleUrl: './css/app.component.css'
 })
 
 export class BodyComponent {
