@@ -3,21 +3,26 @@
         <div class="title-container">
             <h1>{{gallery.items[0].fields.title}}</h1>
         </div>
+        <button *ngIf="allCardsExpanded" (click)="closeExpandedView()">Close Expanded View</button>
         <div class="card-wrapper">
-            <div class="prev arrow" (click)="prevImage()">↤</div>
+            <div class="prev arrow" (click)="prevImage()" (keydown)="prevImage()" tabindex="0"></div>
             <section class="card-section">
-                <div class="card" *ngFor="let imageCard of getVisibleImages(gallery.items[0].fields.contentCard)">
-                    <div class="card-container">
-                        <div class="img-container">
-                            <img [src]="imageCard.fields.image.fields.file.url" alt="">
+                <div class="card"
+                    *ngFor="let imageCard of getVisibleImages(gallery.items[0].fields.contentCard); let i = index"
+                    [ngClass]="{'expanded': allCardsExpanded}" (click)="toggleCard(i)">
+                    <div class="card-container" [ngClass]="{'expanded': allCardsExpanded}">
+                        <div class="img-container" [ngClass]="{'expanded': allCardsExpanded}">
+                            <img [src]="imageCard.fields.image.fields.file.url" alt=""
+                                [ngClass]="{'expanded': allCardsExpanded}">
                         </div>
-                        <div class="description-container">
-                            <p class="description">{{imageCard.fields.imageSummary}}</p>
+                        <div class="description-container" [ngClass]="{'expanded': allCardsExpanded}">
+                            <p class="description" [innerHTML]="transformMarkdownToHTML(imageCard.fields.imageSummary)">
+                            </p>
                         </div>
                     </div>
                 </div>
             </section>
-            <div class="next arrow" (click)="nextImage()">↦</div>
+            <div class="next arrow" (click)="nextImage()"></div>
         </div>
     </div>
 </div>
