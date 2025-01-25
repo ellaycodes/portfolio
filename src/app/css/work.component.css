@@ -149,10 +149,13 @@ h1 {
   }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 450px) {
   .work {
     padding: 8vh 0;
   }
+}
+
+@media screen and (max-width: 425px) {
   .work-experience-card {
     width: 100%;
     display: grid;
