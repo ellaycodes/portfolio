@@ -83,6 +83,7 @@ button:hover {
   overflow-x: hidden;
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
+  cursor: pointer;
 }
 
 .card:not([hidden]) {
@@ -145,7 +146,7 @@ img.expanded {
 }
 
 .description-container {
-  display: none;
+  /* display: none; */
 }
 
 .description-container.expanded {
